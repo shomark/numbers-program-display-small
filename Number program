@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	//declare and initialize variables
+	int num1 = 0;
+	int num2 = 0;
+	int num3 = 0;
+	int smallest = 0;
+	int middle = 0;
+	int largest = 0;
+
+
+	cout << "******Number Ordering Program ****" << endl << endl; //program display header line 
+
+
+	//ask the user for three numbers
+	cout << "Enter first number: ";
+	cin >> num1;
+
+	cout << "Enter second number: ";
+	cin >> num2;
+
+	cout << "Enter third number: ";
+	cin >> num3;
+
+	cout << endl << endl;
+
+	// find then smallest number 
+
+	if ((num1 <= num2) && (num1 <= num3)) //this is the condition line and it should not have a semicolon
+		smallest = num1;
+	else if ((num2 <= num1) && (num2 <= num3))
+		smallest = num2;
+	else
+		smallest = num3;
+
+
+	//find the largest number 
+
+	if ((num1 >= num2) && (num1 >= num3)) //this is the condition line and it should not have a semicolon
+		largest = num1;
+	else if ((num2 >= num1) && (num2 >= num3))
+		largest = num2;
+	else
+		largest = num3;
+
+	//find the middle number 
+	if ((num1 <= num2) && (num1 >= num3) || (num1 >= num2) && (num1 <= num3)) //this is the condition line and it should not have a semicolon
+		middle = num1;
+	else if ((num2 <= num1) && (num2 >= num3) || (num2 >= num1) && (num2 <= num3))
+		middle = num2;
+	else
+		middle = num3;
+
+
+	//display the results
+
+
+	cout << " The smallest number is: " << smallest << endl;
+	cout << " The middle number is: " << middle << endl;
+	cout << " The largest number is: " << largest << endl;
+
+	return 0;
+} //end of the main function
